@@ -1,0 +1,23 @@
+pkgbase = deepseek-harness-tauri-bin
+	pkgdesc = Native Tauri desktop application for DeepSeek Harness
+	pkgver = 0.24.0
+	pkgrel = 3
+	url = https://github.com/dsh-tauri/deepseek-harness-desktop
+	arch = x86_64
+	license = MIT
+	depends = gst-plugins-good
+	depends = gst-plugins-bad
+	depends = libappindicator
+	depends = webkit2gtk-4.1
+	depends = gtk3
+	depends = python
+	depends = python-yaml
+	optdepends = nodejs: required by some bundled extension/tool scripts
+	provides = deepseek-harness-desktop
+	provides = dsh-tauri
+	conflicts = deepseek-harness-desktop
+	conflicts = dsh-tauri
+	source_x86_64 = deepseek-harness-tauri-bin-0.24.0.deb::https://github.com/dsh-tauri/deepseek-harness-desktop/releases/download/v0.24.0/Deepseek.Harness.Desktop_0.24.0_amd64.deb
+	sha256sums_x86_64 = 5ece51fc93d7828b9cb601320a4e2c0797e0830c16a37404d84c44d55681195a
+
+pkgname = deepseek-harness-tauri-bin
