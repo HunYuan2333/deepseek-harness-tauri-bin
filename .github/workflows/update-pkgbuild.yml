@@ -95,13 +95,17 @@ jobs:
             -e "s/^pkgrel=.*/pkgrel=1/" \
             -e "s/^sha256sums_x86_64=.*/sha256sums_x86_64=('${checksum}')/" \
             PKGBUILD
-          # Generate .SRCINFO without building the package
+          # Generate .SRCINFO in a writable container directory
           docker run --rm \
-            -v "$PWD:/work:ro" \
-            -w /tmp \
-            archlinux:latest \
-            bash -c 'cd /work && makepkg --printsrcinfo' \
-            > .SRCINFO
+          -v "$PWD/PKGBUILD:/tmp/PKGBUILD:ro" \
+          archlinux:latest \
+          bash -euc '
+          useradd -m builder
+          cp /tmp/PKGBUILD /home/builder/PKGBUILD
+          chown builder:builder /home/builder/PKGBUILD
+          cd /home/builder
+          runuser -u builder -- makepkg --printsrcinfo
+          ' > .SRCINFO
 
           echo "Updated to $VERSION"
           git diff -- PKGBUILD .SRCINFO
