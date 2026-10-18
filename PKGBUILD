@@ -1,6 +1,6 @@
 pkgname=deepseek-harness-tauri-bin
-pkgver=0.24.0
-pkgrel=3
+pkgver=0.24.3
+pkgrel=1
 pkgdesc='Native Tauri desktop application for DeepSeek Harness'
 arch=('x86_64')
 url='https://github.com/dsh-tauri/deepseek-harness-desktop'
@@ -26,7 +26,7 @@ source_x86_64=(
   "${pkgname}-${pkgver}.deb::https://github.com/dsh-tauri/deepseek-harness-desktop/releases/download/v${pkgver}/Deepseek.Harness.Desktop_${pkgver}_amd64.deb"
 )
 
-sha256sums_x86_64=('5ece51fc93d7828b9cb601320a4e2c0797e0830c16a37404d84c44d55681195a')
+sha256sums_x86_64=('4ba89b2a7aa8e741aea36cfbe208155ef9a598dc6882f2bab3943f15e392850c')
 
 package() {
   cd "$srcdir"
