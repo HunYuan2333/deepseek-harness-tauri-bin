@@ -1,6 +1,6 @@
 pkgbase = deepseek-harness-tauri-bin
 	pkgdesc = Native Tauri desktop application for DeepSeek Harness
-	pkgver = 0.25.0
+	pkgver = 0.30.4
 	pkgrel = 1
 	url = https://github.com/dsh-tauri/deepseek-harness-desktop
 	arch = x86_64
@@ -17,7 +17,7 @@ pkgbase = deepseek-harness-tauri-bin
 	provides = dsh-tauri
 	conflicts = deepseek-harness-desktop
 	conflicts = dsh-tauri
-	source_x86_64 = deepseek-harness-tauri-bin-0.25.0.deb::https://github.com/dsh-tauri/deepseek-harness-desktop/releases/download/v0.25.0/Deepseek.Harness.Desktop_0.25.0_amd64.deb
-	sha256sums_x86_64 = 3c74478fc95fbfcc892d661df8572864a4ebe1806e95fee5bca0be943314a85b
+	source_x86_64 = deepseek-harness-tauri-bin-0.30.4.deb::https://github.com/dsh-tauri/deepseek-harness-desktop/releases/download/v0.30.4/Deepseek.Harness.Desktop_0.30.4_amd64.deb
+	sha256sums_x86_64 = 126ca950d3a36b4d0965bf30ca5fdb4ec5e0238de1a4b7b54528941ee2d67ff8
 
 pkgname = deepseek-harness-tauri-bin
